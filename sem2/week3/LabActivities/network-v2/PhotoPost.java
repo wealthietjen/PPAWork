@@ -46,4 +46,31 @@ public class PhotoPost extends Post
     {
         return caption;
     }
+
+    public void display()
+    {
+        System.out.println(username + " just posted a photo!");
+        System.out.println(getImageFile());
+        System.out.println(getCaption());
+        System.out.print("   " + timeString(timestamp));
+        
+        if(likes > 0) {
+            System.out.println("  -  " + likes + " people like this.");
+        }
+        else {
+            System.out.println();
+        }
+        
+        if(comments.isEmpty()) {
+            System.out.println("   No comments.");
+        }
+        else {
+            System.out.println("   " + comments.size() + " comment(s). Click here to view.");
+        }
+    }
+
+    public static void main(String[] args) {
+        PhotoPost phPost = new PhotoPost("James", "me.png", "me at home");
+        phPost.display();
+    }
 }

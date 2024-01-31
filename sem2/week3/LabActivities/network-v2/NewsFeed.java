@@ -43,9 +43,23 @@ public class NewsFeed
     public void show()
     {
         // display all posts
+        System.out.println();
         for(Post post : posts) {
             post.display();
             System.out.println();   // empty line between posts
         }
+    }
+
+    public static void main(String[] args) {
+        Post msgPost1 = new MessagePost("Jordan", "I'm officially a student at KCL");
+        Post phPost1 = new PhotoPost("Arthur", "schoolYard.png", "this is where i play tag withh my friends");
+        Post evPost1 = new EventPost("Lyle", "started following 3 people");
+        NewsFeed newsFeed = new NewsFeed();
+        
+        newsFeed.addPost(msgPost1);
+        newsFeed.addPost(phPost1);
+        newsFeed.addPost(evPost1);
+
+        newsFeed.show();
     }
 }

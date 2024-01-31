@@ -10,10 +10,10 @@ import java.util.ArrayList;
  */
 public class Post 
 {
-    private String username;  // username of the post's author
-    private long timestamp;
-    private int likes;
-    private ArrayList<String> comments;
+    protected String username;  // username of the post's author
+    protected long timestamp;
+    protected int likes;
+    protected ArrayList<String> comments;
 
     /**
      * Constructor for objects of class Post.
@@ -101,7 +101,7 @@ public class Post
      * @return      A relative time string for the given time
      */
     
-    private String timeString(long time)
+    protected String timeString(long time)
     {
         long current = System.currentTimeMillis();
         long pastMillis = current - time;      // time passed in milliseconds
