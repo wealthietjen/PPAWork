@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class EventPost extends Post {
     
     protected String desc;
