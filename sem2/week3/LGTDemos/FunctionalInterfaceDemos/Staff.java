@@ -5,7 +5,6 @@ public class Staff implements Person {
     private String name;
     private int id;
     private int energy;
-    private int addEnergy;
     private Employee job;
 
     public Staff(String name, int id) {

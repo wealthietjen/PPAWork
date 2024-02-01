@@ -4,7 +4,6 @@ public class Student implements Person {
     private String name;
     private int id;
     private int energy;
-    private int addEnergy;
     private Employee job;
 
     public Student(String name, int id) {
